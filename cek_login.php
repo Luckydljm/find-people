@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
  
     if($select_user->rowCount() > 0){
             $_SESSION['username']  = $row['username'];
+            $_SESSION['type']  = $row['type'];
             $_SESSION['id']  = $row['id'];
             $_SESSION['sukses'] = "Welcome to FindPeople Dashboard!";
             setcookie('id', $row['id'], time() + 60*60*24*30, '/');

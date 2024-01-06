@@ -8,6 +8,7 @@ if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
 }
 
 $user = $_SESSION['id'];
+$type = $_SESSION['type'];
 
 ?>
 
@@ -74,7 +75,8 @@ $user = $_SESSION['id'];
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Admin</h6>
+                            <h6>Nama</h6>
+                            <p class="text-muted"><?= $type; ?></p>
                         </li>
 
                         <li>
