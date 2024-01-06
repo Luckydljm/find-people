@@ -93,10 +93,11 @@
                                         <p class="text-center small">Enter your personal details to create account</p>
                                     </div>
 
-                                    <form class="row g-3 needs-validation" novalidate>
+                                    <form class="row g-3 needs-validation" method="post" action="regist_act.php"
+                                        novalidate>
                                         <div class="col-12">
                                             <label for="yourName" class="form-label">Your Name</label>
-                                            <input type="text" name="name" class="form-control" id="yourName" required>
+                                            <input type="text" class="form-control" id="yourName" required>
                                             <div class="invalid-feedback">Please, enter your name!</div>
                                         </div>
 
@@ -116,7 +117,8 @@
                                             <div class="invalid-feedback">Please enter your password!</div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                                            <button class="btn btn-primary w-100" type="submit" name="submit">Create
+                                                Account</button>
                                         </div>
                                         <div class="col-12 text-center">
                                             <p class="small mb-0">Already have an account? <a href="login.php">Log
