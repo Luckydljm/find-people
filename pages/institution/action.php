@@ -40,28 +40,31 @@ session_start();
  
  } 
 
- //   Edit
- if(isset($_POST['update'])){
+ //   Delete
+ if(isset($_POST['delete'])){
 
-    $institution = $_POST['institution'];
-    $institution = filter_var($institution, FILTER_SANITIZE_STRING);
-    $alamat = $_POST['alamat'];
-    $alamat = filter_var($alamat, FILTER_SANITIZE_STRING);
-    $department = $_POST['department'];
-    $department = filter_var($department, FILTER_SANITIZE_STRING);
-    $deskripsi = $_POST['deskripsi'];
-    $deskripsi = filter_var($deskripsi, FILTER_SANITIZE_STRING);
-    $malam = $_POST['malam'];
-    $malam = filter_var($malam, FILTER_SANITIZE_STRING);
-    
+    $delete_id = $_POST['id_institution'];
+    $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
 
-    $update_dep = $conn->prepare("UPDATE `institution` SET alamat = ?, department = ?, deskripsi = ?, malam = ? WHERE institution = ?");
-    $update_dep->execute([$alamat, $department, $deskripsi, $malam, $institution]);
- 
-    $_SESSION['update'] = "institution berhasil diupdate!";
+    $verify_institution = $conn->prepare("SELECT * FROM `institution` WHERE id_institution = ? LIMIT 1");
+    $verify_institution->execute([$delete_id]);
+
+    if($verify_institution->rowCount() > 0){
+        
+    $delete_logo = $conn->prepare("SELECT * FROM `institution` WHERE id_institution = ? LIMIT 1");
+    $delete_logo->execute([$delete_id]);
+    $fetch_thumb = $delete_logo->fetch(PDO::FETCH_ASSOC);
+    unlink('../../uploaded_img/'.$fetch_thumb['logo']);
+    $delete_institution = $conn->prepare("DELETE FROM `institution` WHERE id_institution = ?");
+    $delete_institution->execute([$delete_id]);
+    $_SESSION['success'] = "Data deleted!";
     header('location:../../layouts/template.php?pages=institution');
- 
- } 
+    
+    }else{
+        $_SESSION['fail'] = "Data not found!";
+        header('location:../../layouts/template.php?pages=institution');
+    }
+}
 
 
 ?>

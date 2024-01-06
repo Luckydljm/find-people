@@ -9,26 +9,6 @@ Swal.fire({
 </script>
 <?php unset($_SESSION['success']); } ?>
 
-<?php if (isset($_SESSION['flash'])) { ?>
-<script>
-Swal.fire({
-    title: "FAILED!",
-    text: "<?= $_SESSION['flash']; ?>",
-    icon: "error"
-});
-</script>
-<?php unset($_SESSION['flash']); } ?>
-
-<?php if (isset($_SESSION['update'])) { ?>
-<script>
-Swal.fire({
-    title: "SUCCESS!",
-    text: "<?= $_SESSION['update']; ?>",
-    icon: "success"
-});
-</script>
-<?php unset($_SESSION['update']); } ?>
-
 <?php if (isset($_SESSION['fail'])) { ?>
 <script>
 Swal.fire({
@@ -90,15 +70,11 @@ Swal.fire({
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end" style="font-size: 0.9rem;">
                                             <li>
-                                                <button class="dropdown-item modal-btn btn-edit-ins" id="btnEditIns"
-                                                    data-bs-toggle="modal" data-bs-target="#modalEditIns"
+                                                <button class="dropdown-item modal-btn btn-delete-ins" id="btnDeleteIns"
+                                                    data-bs-toggle="modal" data-bs-target="#modalDeleteIns"
                                                     data-id="<?= $fetch_data['id_institution']; ?>"
-                                                    data-logo="<?= $fetch_data['logo']; ?>"
-                                                    data-institution="<?= $fetch_data['institution']; ?>"
-                                                    data-alamat="<?= $fetch_data['alamat']; ?>"
-                                                    data-department="<?= $fetch_data['department']; ?>"
-                                                    data-deskripsi="<?= $fetch_data['deskripsi']; ?>"><i
-                                                        class="bi bi-pencil-fill"></i>Edit</button>
+                                                    data-institution="<?= $fetch_data['institution']; ?>"><i
+                                                        class="bi bi-trash3"></i>Delete</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -168,26 +144,26 @@ Swal.fire({
     </form>
 </div>
 
-<!-- Edit -->
-<div class="modal text-gray-900" id="modalEditDep" tabindex="-1">
-    <form action="../pages/departemen/action.php" method="POST" class="modal-form" enctype="multipart/form-data">
+<!-- delete -->
+<div class="modal text-gray-900" id="modalDeleteIns" tabindex="-1">
+    <form action="../pages/institution/action.php" method="POST" class="modal-form">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Data Departemen</h5>
+                    <h5 class="modal-title">Delete Institution</h5>
                     <button type="button" class="btn-close modal-btn" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <p>Are you sure you want to delete <b class="institution"></b>?</p>
 
                 </div>
-                <input type="hidden" class="dep_id" name="dep_id">
+                <input class="id_institution" type="hidden" name="id_institution">
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-primary modal-btn" name="update">Simpan</button>
+                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger modal-btn" name="delete">Delete</button>
                 </div>
             </div>
         </div>
     </form>
-</div>form>
 </div>

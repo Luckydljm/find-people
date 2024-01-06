@@ -185,6 +185,41 @@ $type = $_SESSION['type'];
         });
     });
     $.fn.DataTable.ext.pager.numbers_length = 3;
+
+    $(document).ready(function() {
+        $('.btn-delete-ins').click(function() {
+            let id = $(this).data('id');
+            let institution = $(this).attr('data-institution');
+            $('.id_institution').val(id);
+            $('.institution').empty();
+            $('.institution').append(institution);
+        });
+    });
+
+    $(document).ready(function() {
+        $('.btn-delete-summary').click(function() {
+            let id = $(this).data('id');
+            let title = $(this).attr('data-title');
+            $('.id_summary').val(id);
+            $('.title').empty();
+            $('.title').append(title);
+        });
+    });
+
+    $('.btn-edit-summary').click(function() {
+        let id = $(this).data('id');
+        let title = $(this).attr('data-title');
+        let media = $(this).attr('data-media');
+        let publication = $(this).attr('data-publication');
+        let link = $(this).attr('data-link');
+        let year = $(this).attr('data-year');
+        $('.id_summary').val(id);
+        $('.title').attr('value', title);
+        $('.media').prop('value', media);
+        $('.publication').prop('value', publication);
+        $('.link').text(link);
+        $('.year').attr('value', year);
+    });
     </script>
 </body>
 
