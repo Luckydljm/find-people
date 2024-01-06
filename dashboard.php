@@ -8,7 +8,7 @@
     if (isset($_SESSION['sukses'])) {
     ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Hallo <?php echo $_SESSION['nama']; ?>!</strong> <?= $_SESSION['sukses']; ?>
+        <strong>Hallo <?php echo $_SESSION['type']; ?>!</strong> <?= $_SESSION['sukses']; ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php

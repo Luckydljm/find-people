@@ -15,6 +15,10 @@ elseif ($page=='profile'){
 elseif ($page=='summary'){
     include "pages/summary/summary.php";
 }
+// Institution
+elseif ($page=='institution'){
+    include "pages/institution/institution.php";
+}
 else{
     include "pages-error-404.php";
 }

@@ -98,18 +98,17 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                                    <label for="nama" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input name="fullName" type="text" class="form-control" id="fullName"
-                                            value="Kevin Anderson">
+                                        <input name="nama" type="text" class="form-control" id="nama">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                                    <label for="tentang" class="col-md-4 col-lg-3 col-form-label">About</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <textarea name="about" class="form-control" id="about"
-                                            style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                                        <textarea name="tentang" class="form-control" id="tentang"
+                                            style="height: 100px"></textarea>
                                     </div>
                                 </div>
 
@@ -142,7 +141,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="submit" class="btn btn-primary" name="submit">Save Changes</button>
                                 </div>
                             </form><!-- End Profile Edit Form -->
 

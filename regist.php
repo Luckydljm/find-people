@@ -96,8 +96,8 @@
                                     <form class="row g-3 needs-validation" method="post" action="regist_act.php"
                                         novalidate>
                                         <div class="col-12">
-                                            <label for="yourName" class="form-label">Your Name</label>
-                                            <input type="text" class="form-control" id="yourName" required>
+                                            <label for="nama" class="form-label">Your Name</label>
+                                            <input type="text" class="form-control" id="nama" name="nama" required>
                                             <div class="invalid-feedback">Please, enter your name!</div>
                                         </div>
 
