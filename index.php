@@ -83,12 +83,12 @@
                     <div class="card-body">
                         <form class="row" action="search.php" method="post">
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control" name="name" placeholder="Search...">
+                                <input type="text" class="form-control" name="name" placeholder="Search..." required>
                             </div>
                             <div class="col-md-10 mt-2">
-                                <select id="type" name="type"
+                                <select id="access" name="access"
                                     class="form-select bg-primary-subtle text-emphasis-primary">
-                                    <option selected value="Author">Author</option>
+                                    <option selected value="Authors">Authors</option>
                                     <option value="Affiliation">Affiliation</option>
                                 </select>
                             </div>
