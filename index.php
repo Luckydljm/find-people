@@ -81,7 +81,7 @@
             <section class="section">
                 <div class="card">
                     <div class="card-body">
-                        <form class="row" action="" method="post">
+                        <form class="row" action="search.php" method="post">
                             <div class="col-md-12 mt-4">
                                 <input type="text" class="form-control" name="name" placeholder="Search...">
                             </div>

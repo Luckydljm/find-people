@@ -88,7 +88,7 @@ $type = $_SESSION['type'];
                                 while($fetch_data = $select_data->fetch(PDO::FETCH_ASSOC)){
                                     $photo = $fetch_data['foto'];
                                     $nama = $fetch_data['nama'];
-                                    if(!empty($foto)){
+                                    if(!empty($photo)){
                         ?>
                         <img src="../uploaded_img/<?= $fetch_data['foto']; ?>" alt="Profile" class="rounded-circle" />
                         <?php }else{ ?>
