@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Pages Not Found 404 - Website Laporan Nilai Curah Hujan PT. PUSRI</title>
+    <title>Pages Not Found 404 - Find People Website</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
                 <a class="btn" href="?pages=dashboard">Back to home</a>
                 <img src="assets/img/not-found.svg" class="img-fluid py-5" alt="Page Not Found">
                 <div class="credits">
-                    Created by <a href="#">PT PUSRI</a>
+                    Created by <a href="#">Nanda Putri Julika</a>
                 </div>
             </section>
 
