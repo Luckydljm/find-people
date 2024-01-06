@@ -7,12 +7,13 @@ $page = $_GET['pages'];
 if ($page=='dashboard'){
 	include "dashboard.php";
 }
-// Report
-elseif ($page=='report'){
-    include "pages/report/report.php";
+// Profile
+elseif ($page=='profile'){
+    include "pages/profile/profile.php";
 }
-elseif ($page=='make-report'){
-    include "pages/report/make-report.php";
+// Summary
+elseif ($page=='summary'){
+    include "pages/summary/summary.php";
 }
 else{
     include "pages-error-404.php";
